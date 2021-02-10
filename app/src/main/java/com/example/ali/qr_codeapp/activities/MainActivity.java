@@ -1,9 +1,9 @@
 package com.example.ali.qr_codeapp.activities;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.ali.qr_codeapp.R;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void BtnScan() {
 
         IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
         integrator.setPrompt("Scan a sample sticker");
         integrator.setCameraId(0);  // Use a specific camera of the device
         integrator.setBeepEnabled(false);
